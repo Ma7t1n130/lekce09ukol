@@ -1,5 +1,6 @@
 package cz.martin.lekce09ukol.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import cz.martin.lekce09ukol.Settings;
 
 public class Contribution {
@@ -50,6 +51,7 @@ public class Contribution {
         this.user = user;
     }
 
+    @JsonIgnore
     public String getFileLine(){
         return this.getContribution() + Settings.SEPARATOR() +
                 this.getContributionId() + Settings.SEPARATOR() +
